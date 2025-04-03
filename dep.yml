@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: party-pod
-          image: ${IMAGE}
+          image: sree471/party:v28
           ports:
             - containerPort: 8080
 ---
@@ -44,4 +44,4 @@ spec:
   template:
     spec:
       containers:
-        - image: ${IMAGE}
+        - image: sree471/party:v28
