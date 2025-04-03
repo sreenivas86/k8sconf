@@ -23,10 +23,9 @@ spec:
     spec:
       containers:
         - name: party-pod
-          image: sree471/party:16
+          image: sree471/party:15
           ports:
             - containerPort: 8080
-
 ---
 #service file
 apiVersion: v1
