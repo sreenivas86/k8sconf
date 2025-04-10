@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+# Information about  deployment 
+metadata:
+  # deployement name 
+  name: party-dep
+  # labels  name and value
+  labels:
+    app: party
+spec:
+  # number of replicas
+  replicas: 2
+  # selector labels for deploymet and service
+  selector:
+    matchLabels:
+      app: party
+  # details about templates or pod  details
+  template:
+    metadata:
+      name: party-pod
+      labels:
+        app: party
+    spec:
+      containers:
+        - name: party-pod
+          image: sree471/party:v28
+          ports:
+            - containerPort: 8080
