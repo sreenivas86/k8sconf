@@ -26,3 +26,20 @@ spec:
           image: sree471/party:v44
           ports:
             - containerPort: 8080
+---
+#service file
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-dep
+  labels:
+    app: party
+spec:
+  selector:
+    app: party
+  type: NodePort
+  ports:
+    - port: 8080
+      nodePort: 30002
+
+
