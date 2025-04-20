@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: party-pod
-          image: sree471/party:v44
+          image: sree471/party:av15
           ports:
             - containerPort: 8080
 ---
@@ -41,5 +41,3 @@ spec:
   ports:
     - port: 8080
       nodePort: 30002
-
-
